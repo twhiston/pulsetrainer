@@ -1,5 +1,5 @@
 version: "1"
-
+debug: false #default is false, only needs to be set on non RPi architectures
 routines:
   #routines is a map, so each routine has a name, used to identify it
   routine_name:
@@ -8,14 +8,9 @@ routines:
       - pattern: [true,false,true,true,true,false]
         pin: 1
         delay: 300
-        #manual: true #if true then the delay value is ignored and the pattern can only be advanced via interaction
-        #loop: true
       - pattern: [true,false,true,false,true,false]
         pin: 2
         delay: 600
-        #manual: false
-        #loop: false
     receivers:
       - pattern: [true,false,true,false,true,false]
         pin: 3
-        #loop: true
